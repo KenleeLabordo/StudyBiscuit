@@ -1,10 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBiscuit Chatbot</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .topic-guide {
+      max-width: 600px;
+      background: #ffffffcc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .topic-guide h3 {
+      margin-top: 0;
+      color: #4a90e2;
+    }
+
+    .topic-guide ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .topic-guide p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    df-messenger {
+      --df-messenger-button-titlebar-color: #4a90e2;
+      --df-messenger-button-titlebar-font-color: white;
+      --df-messenger-chat-background-color: #fff;
+      --df-messenger-font-color: #333;
+    }
+  </style>
+</head>
 <body>
 
   <h1>Welcome to StudyBiscuit</h1>
 
-  <div style="max-width: 600px; background: #ffffffcc; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-    <h3 style="margin-top: 0; color: #4a90e2;">Ask me about:</h3>
-    <ul style="list-style: none; padding: 0; line-height: 1.8; color: #333;">
+  <div class="topic-guide">
+    <h3>Ask me about:</h3>
+    <ul>
       <li>🏠 Accommodation</li>
       <li>📅 Assignment Deadlines</li>
       <li>🏥 Campus Services</li>
@@ -17,7 +76,7 @@
       <li>🧾 Transcript Request</li>
       <li>💳 Tuition Fees</li>
     </ul>
-    <p style="font-size: 0.9em; color: #666;">Just type a question or select a topic to begin!</p>
+    <p>Just type a question or select a topic to begin!</p>
   </div>
 
   <df-messenger
@@ -27,3 +86,4 @@
   </df-messenger>
 
 </body>
+</html>
